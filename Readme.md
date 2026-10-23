@@ -30,21 +30,6 @@ Feature availability depends on the current implementation and its configured de
 - PyTorch
 - pytest
 
-## Project Structure
-
-```text
-Property_ai_classifier/
-├── main.py
-├── document_bundle.py
-├── property_ai_review.py
-├── sale_deed_extractor.py
-├── test_document_bundle.py
-├── requirements.txt
-├── packages.txt
-├── .gitignore
-├── README.md
-└── .venv/                  # Local environment; do not commit
-```
 
 This is the intended core structure. Additional modules, model assets, training scripts, and tests may exist in the repository.
 
@@ -55,14 +40,6 @@ This is the intended core structure. Additional modules, model assets, training 
 - Git, if you intend to use GitHub.
 - Tesseract OCR installed and accessible when scanned-document OCR is required.
 - The dependencies and model assets required by the current implementation.
-
-## Local Installation
-
-Open PowerShell and navigate to the project directory:
-
-```powershell
-cd "C:\Users\avyay\Documents\code folder\Property_ai_classifier"
-```
 
 Create a virtual environment if one does not already exist:
 
