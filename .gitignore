@@ -32,10 +32,8 @@ real_validation/
 
 # Large experiment and evaluation artifacts
 aggregation_comparison_v7/
-evaluation_v6_candidate_v7/
 evaluation_windowing_v7_long/
 field_extraction_evaluation/
-model_comparison_v7/
 ocr_evaluation/
 
 # Generated evaluation data

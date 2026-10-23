@@ -1,0 +1,156 @@
+{
+  "seed": 42,
+  "split_method": "grouped_by_template",
+  "test_fraction": 0.2,
+  "validation_fraction": 0.2,
+  "classes": {
+    "encumbrance_certificate": {
+      "total_templates": 20,
+      "train_templates": [
+        "EN01",
+        "EN02",
+        "EN03",
+        "EN04",
+        "EN07",
+        "EN08",
+        "EN09",
+        "EN11",
+        "EN12",
+        "EN13",
+        "EN17",
+        "EN18"
+      ],
+      "validation_templates": [
+        "EN10",
+        "EN14",
+        "EN16",
+        "EN19"
+      ],
+      "test_templates": [
+        "EN05",
+        "EN06",
+        "EN15",
+        "EN20"
+      ]
+    },
+    "other_or_unknown": {
+      "total_templates": 20,
+      "train_templates": [
+        "OT02",
+        "OT05",
+        "OT08",
+        "OT10",
+        "OT11",
+        "OT12",
+        "OT13",
+        "OT15",
+        "OT16",
+        "OT17",
+        "OT19",
+        "OT20"
+      ],
+      "validation_templates": [
+        "OT01",
+        "OT04",
+        "OT07",
+        "OT18"
+      ],
+      "test_templates": [
+        "OT03",
+        "OT06",
+        "OT09",
+        "OT14"
+      ]
+    },
+    "property_tax_receipt": {
+      "total_templates": 20,
+      "train_templates": [
+        "PR01",
+        "PR02",
+        "PR04",
+        "PR05",
+        "PR06",
+        "PR07",
+        "PR12",
+        "PR14",
+        "PR17",
+        "PR18",
+        "PR19",
+        "PR20"
+      ],
+      "validation_templates": [
+        "PR03",
+        "PR08",
+        "PR10",
+        "PR13"
+      ],
+      "test_templates": [
+        "PR09",
+        "PR11",
+        "PR15",
+        "PR16"
+      ]
+    },
+    "sale_deed": {
+      "total_templates": 20,
+      "train_templates": [
+        "SA01",
+        "SA02",
+        "SA03",
+        "SA05",
+        "SA06",
+        "SA08",
+        "SA09",
+        "SA12",
+        "SA13",
+        "SA14",
+        "SA16",
+        "SA20"
+      ],
+      "validation_templates": [
+        "SA07",
+        "SA10",
+        "SA15",
+        "SA18"
+      ],
+      "test_templates": [
+        "SA04",
+        "SA11",
+        "SA17",
+        "SA19"
+      ]
+    }
+  },
+  "row_counts": {
+    "train": 3840,
+    "validation": 1280,
+    "test": 1280
+  },
+  "dataset_file": "synthetic_property_documents_v7_long.csv",
+  "dataset_rows": 6400,
+  "variants": [
+    "clean",
+    "ocr_noisy",
+    "long_clean",
+    "long_ocr_noisy"
+  ],
+  "labels": [
+    "encumbrance_certificate",
+    "other_or_unknown",
+    "property_tax_receipt",
+    "sale_deed"
+  ],
+  "token_statistics": {
+    "documents": 6400,
+    "max_length": 512,
+    "minimum_tokens": 33,
+    "median_tokens": 232.0,
+    "p90_tokens": 430.0,
+    "p95_tokens": 446.0,
+    "maximum_tokens": 501,
+    "truncated_documents": 0,
+    "truncated_percentage": 0.0
+  },
+  "max_length": 512,
+  "training_note": "The same template IDs are kept within one split. Validation macro-F1 across all available variants selects the BERT checkpoint."
+}

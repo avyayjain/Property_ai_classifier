@@ -1,0 +1,92 @@
+{
+  "strategy": "clean_only",
+  "model_name": "prajjwal1/bert-tiny",
+  "max_length": 512,
+  "epochs_configured": 3,
+  "best_epoch": 3,
+  "best_mean_validation_macro_f1": 0.9968730456535335,
+  "training_rows": 1920,
+  "training_history": [
+    {
+      "epoch": 1,
+      "training_loss": 1.2507635926206906,
+      "validation_by_variant": {
+        "clean": {
+          "accuracy": 0.95,
+          "macro_f1": 0.9494949494949495,
+          "n": 320
+        },
+        "ocr_noisy": {
+          "accuracy": 0.93125,
+          "macro_f1": 0.9289083569633106,
+          "n": 320
+        },
+        "long_clean": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "n": 320
+        },
+        "long_ocr_noisy": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "n": 320
+        }
+      },
+      "mean_validation_macro_f1": 0.969600826614565
+    },
+    {
+      "epoch": 2,
+      "training_loss": 0.6102583023409048,
+      "validation_by_variant": {
+        "clean": {
+          "accuracy": 0.990625,
+          "macro_f1": 0.9906217029424407,
+          "n": 320
+        },
+        "ocr_noisy": {
+          "accuracy": 0.978125,
+          "macro_f1": 0.9780830495871004,
+          "n": 320
+        },
+        "long_clean": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "n": 320
+        },
+        "long_ocr_noisy": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "n": 320
+        }
+      },
+      "mean_validation_macro_f1": 0.9921761881323853
+    },
+    {
+      "epoch": 3,
+      "training_loss": 0.1575663396778206,
+      "validation_by_variant": {
+        "clean": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "n": 320
+        },
+        "ocr_noisy": {
+          "accuracy": 0.9875,
+          "macro_f1": 0.9874921826141339,
+          "n": 320
+        },
+        "long_clean": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "n": 320
+        },
+        "long_ocr_noisy": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "n": 320
+        }
+      },
+      "mean_validation_macro_f1": 0.9968730456535335
+    }
+  ]
+}

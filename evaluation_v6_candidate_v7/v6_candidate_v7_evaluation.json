@@ -1,0 +1,2295 @@
+{
+  "model": "C:\\Users\\avyay\\Documents\\code folder\\Property_ai_classifier\\property_bert_tiny_candidate_v6_ocr_augmented",
+  "dataset": "C:\\Users\\avyay\\Documents\\code folder\\Property_ai_classifier\\synthetic_property_documents_v7_long.csv",
+  "validation_split_manifest": "C:\\Users\\avyay\\Documents\\code folder\\Property_ai_classifier\\evaluation_windowing_v7_long\\split_manifest.json",
+  "device": "cuda",
+  "labels": [
+    "encumbrance_certificate",
+    "other_or_unknown",
+    "property_tax_receipt",
+    "sale_deed"
+  ],
+  "max_length": 128,
+  "stride": 64,
+  "threshold_policy": {
+    "target_accepted_accuracy": 0.95,
+    "minimum_validation_coverage": 0.1,
+    "thresholds_calibrated_using": "validation_only"
+  },
+  "training_data_overlap_check": {
+    "verification_available": false,
+    "reason": "No identifiable v6 training-template manifest was found. The v7 validation/test results cannot be certified as independent of the existing checkpoint's training data.",
+    "metadata_files": []
+  },
+  "validation_results": {
+    "first_window": {
+      "classification": {
+        "accuracy": 0.9796875,
+        "macro_f1": 0.9797435593337422,
+        "balanced_accuracy": 0.9796875,
+        "confusion_matrix": [
+          [
+            320,
+            0,
+            0,
+            0
+          ],
+          [
+            23,
+            297,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            320,
+            0
+          ],
+          [
+            3,
+            0,
+            0,
+            317
+          ]
+        ],
+        "classification_report": {
+          "encumbrance_certificate": {
+            "precision": 0.9248554913294798,
+            "recall": 1.0,
+            "f1-score": 0.960960960960961,
+            "support": 320.0
+          },
+          "other_or_unknown": {
+            "precision": 1.0,
+            "recall": 0.928125,
+            "f1-score": 0.9627228525121556,
+            "support": 320.0
+          },
+          "property_tax_receipt": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 320.0
+          },
+          "sale_deed": {
+            "precision": 1.0,
+            "recall": 0.990625,
+            "f1-score": 0.9952904238618524,
+            "support": 320.0
+          },
+          "accuracy": 0.9796875,
+          "macro avg": {
+            "precision": 0.9812138728323699,
+            "recall": 0.9796875,
+            "f1-score": 0.9797435593337422,
+            "support": 1280.0
+          },
+          "weighted avg": {
+            "precision": 0.9812138728323699,
+            "recall": 0.9796875,
+            "f1-score": 0.9797435593337422,
+            "support": 1280.0
+          }
+        }
+      },
+      "threshold_calibration": {
+        "threshold": 0.3732279445407445,
+        "accepted_count": 1280,
+        "accepted_accuracy": 0.9796875,
+        "coverage": 1.0,
+        "calibration_succeeded": true,
+        "target_accepted_accuracy": 0.95,
+        "minimum_validation_coverage": 0.1
+      },
+      "review_policy_performance": {
+        "threshold": 0.3732279445407445,
+        "total_documents": 1280,
+        "accepted_documents": 1280,
+        "rejected_documents": 0,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.9796875
+      }
+    },
+    "mean_probability": {
+      "classification": {
+        "accuracy": 0.625,
+        "macro_f1": 0.6428571428571428,
+        "balanced_accuracy": 0.625,
+        "confusion_matrix": [
+          [
+            320,
+            0,
+            0,
+            0
+          ],
+          [
+            160,
+            160,
+            0,
+            0
+          ],
+          [
+            160,
+            0,
+            160,
+            0
+          ],
+          [
+            160,
+            0,
+            0,
+            160
+          ]
+        ],
+        "classification_report": {
+          "encumbrance_certificate": {
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1-score": 0.5714285714285714,
+            "support": 320.0
+          },
+          "other_or_unknown": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 320.0
+          },
+          "property_tax_receipt": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 320.0
+          },
+          "sale_deed": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 320.0
+          },
+          "accuracy": 0.625,
+          "macro avg": {
+            "precision": 0.85,
+            "recall": 0.625,
+            "f1-score": 0.6428571428571428,
+            "support": 1280.0
+          },
+          "weighted avg": {
+            "precision": 0.85,
+            "recall": 0.625,
+            "f1-score": 0.6428571428571427,
+            "support": 1280.0
+          }
+        }
+      },
+      "threshold_calibration": {
+        "threshold": 0.746310158383794,
+        "accepted_count": 841,
+        "accepted_accuracy": 0.9512485136741974,
+        "coverage": 0.65703125,
+        "calibration_succeeded": true,
+        "target_accepted_accuracy": 0.95,
+        "minimum_validation_coverage": 0.1
+      },
+      "review_policy_performance": {
+        "threshold": 0.746310158383794,
+        "total_documents": 1280,
+        "accepted_documents": 841,
+        "rejected_documents": 439,
+        "coverage": 0.65703125,
+        "accepted_accuracy": 0.9512485136741974
+      }
+    },
+    "mean_logits": {
+      "classification": {
+        "accuracy": 0.625,
+        "macro_f1": 0.6428571428571428,
+        "balanced_accuracy": 0.625,
+        "confusion_matrix": [
+          [
+            320,
+            0,
+            0,
+            0
+          ],
+          [
+            160,
+            160,
+            0,
+            0
+          ],
+          [
+            160,
+            0,
+            160,
+            0
+          ],
+          [
+            160,
+            0,
+            0,
+            160
+          ]
+        ],
+        "classification_report": {
+          "encumbrance_certificate": {
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1-score": 0.5714285714285714,
+            "support": 320.0
+          },
+          "other_or_unknown": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 320.0
+          },
+          "property_tax_receipt": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 320.0
+          },
+          "sale_deed": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 320.0
+          },
+          "accuracy": 0.625,
+          "macro avg": {
+            "precision": 0.85,
+            "recall": 0.625,
+            "f1-score": 0.6428571428571428,
+            "support": 1280.0
+          },
+          "weighted avg": {
+            "precision": 0.85,
+            "recall": 0.625,
+            "f1-score": 0.6428571428571427,
+            "support": 1280.0
+          }
+        }
+      },
+      "threshold_calibration": {
+        "threshold": 0.7907964919049697,
+        "accepted_count": 842,
+        "accepted_accuracy": 0.9501187648456056,
+        "coverage": 0.6578125,
+        "calibration_succeeded": true,
+        "target_accepted_accuracy": 0.95,
+        "minimum_validation_coverage": 0.1
+      },
+      "review_policy_performance": {
+        "threshold": 0.7907964919049697,
+        "total_documents": 1280,
+        "accepted_documents": 842,
+        "rejected_documents": 438,
+        "coverage": 0.6578125,
+        "accepted_accuracy": 0.9501187648456056
+      }
+    },
+    "highest_confidence_window": {
+      "classification": {
+        "accuracy": 0.778125,
+        "macro_f1": 0.7798402288693551,
+        "balanced_accuracy": 0.778125,
+        "confusion_matrix": [
+          [
+            320,
+            0,
+            0,
+            0
+          ],
+          [
+            125,
+            195,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            320,
+            0
+          ],
+          [
+            159,
+            0,
+            0,
+            161
+          ]
+        ],
+        "classification_report": {
+          "encumbrance_certificate": {
+            "precision": 0.5298013245033113,
+            "recall": 1.0,
+            "f1-score": 0.6926406926406926,
+            "support": 320.0
+          },
+          "other_or_unknown": {
+            "precision": 1.0,
+            "recall": 0.609375,
+            "f1-score": 0.7572815533980582,
+            "support": 320.0
+          },
+          "property_tax_receipt": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 320.0
+          },
+          "sale_deed": {
+            "precision": 1.0,
+            "recall": 0.503125,
+            "f1-score": 0.6694386694386695,
+            "support": 320.0
+          },
+          "accuracy": 0.778125,
+          "macro avg": {
+            "precision": 0.8824503311258278,
+            "recall": 0.778125,
+            "f1-score": 0.7798402288693551,
+            "support": 1280.0
+          },
+          "weighted avg": {
+            "precision": 0.8824503311258278,
+            "recall": 0.778125,
+            "f1-score": 0.779840228869355,
+            "support": 1280.0
+          }
+        }
+      },
+      "threshold_calibration": {
+        "threshold": 0.8727345657540176,
+        "accepted_count": 1007,
+        "accepted_accuracy": 0.9503475670307845,
+        "coverage": 0.78671875,
+        "calibration_succeeded": true,
+        "target_accepted_accuracy": 0.95,
+        "minimum_validation_coverage": 0.1
+      },
+      "review_policy_performance": {
+        "threshold": 0.8727345657540176,
+        "total_documents": 1280,
+        "accepted_documents": 1007,
+        "rejected_documents": 273,
+        "coverage": 0.78671875,
+        "accepted_accuracy": 0.9503475670307845
+      }
+    },
+    "first_weighted": {
+      "classification": {
+        "accuracy": 0.9640625,
+        "macro_f1": 0.9641052961313799,
+        "balanced_accuracy": 0.9640625,
+        "confusion_matrix": [
+          [
+            320,
+            0,
+            0,
+            0
+          ],
+          [
+            42,
+            278,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            320,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            316
+          ]
+        ],
+        "classification_report": {
+          "encumbrance_certificate": {
+            "precision": 0.8743169398907104,
+            "recall": 1.0,
+            "f1-score": 0.9329446064139941,
+            "support": 320.0
+          },
+          "other_or_unknown": {
+            "precision": 1.0,
+            "recall": 0.86875,
+            "f1-score": 0.9297658862876255,
+            "support": 320.0
+          },
+          "property_tax_receipt": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 320.0
+          },
+          "sale_deed": {
+            "precision": 1.0,
+            "recall": 0.9875,
+            "f1-score": 0.9937106918238994,
+            "support": 320.0
+          },
+          "accuracy": 0.9640625,
+          "macro avg": {
+            "precision": 0.9685792349726776,
+            "recall": 0.9640625,
+            "f1-score": 0.9641052961313799,
+            "support": 1280.0
+          },
+          "weighted avg": {
+            "precision": 0.9685792349726775,
+            "recall": 0.9640625,
+            "f1-score": 0.9641052961313796,
+            "support": 1280.0
+          }
+        }
+      },
+      "threshold_calibration": {
+        "threshold": 0.44940215228431185,
+        "accepted_count": 1280,
+        "accepted_accuracy": 0.9640625,
+        "coverage": 1.0,
+        "calibration_succeeded": true,
+        "target_accepted_accuracy": 0.95,
+        "minimum_validation_coverage": 0.1
+      },
+      "review_policy_performance": {
+        "threshold": 0.44940215228431185,
+        "total_documents": 1280,
+        "accepted_documents": 1280,
+        "rejected_documents": 0,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.9640625
+      }
+    }
+  },
+  "test_results": {
+    "first_window": {
+      "classification": {
+        "accuracy": 0.96953125,
+        "macro_f1": 0.9693350019815475,
+        "balanced_accuracy": 0.96953125,
+        "confusion_matrix": [
+          [
+            320,
+            0,
+            0,
+            0
+          ],
+          [
+            37,
+            281,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            320,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            320
+          ]
+        ],
+        "classification_report": {
+          "encumbrance_certificate": {
+            "precision": 0.896358543417367,
+            "recall": 1.0,
+            "f1-score": 0.9453471196454948,
+            "support": 320.0
+          },
+          "other_or_unknown": {
+            "precision": 1.0,
+            "recall": 0.878125,
+            "f1-score": 0.9351081530782029,
+            "support": 320.0
+          },
+          "property_tax_receipt": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 320.0
+          },
+          "sale_deed": {
+            "precision": 0.9937888198757764,
+            "recall": 1.0,
+            "f1-score": 0.9968847352024922,
+            "support": 320.0
+          },
+          "accuracy": 0.96953125,
+          "macro avg": {
+            "precision": 0.9725368408232858,
+            "recall": 0.96953125,
+            "f1-score": 0.9693350019815475,
+            "support": 1280.0
+          },
+          "weighted avg": {
+            "precision": 0.9725368408232858,
+            "recall": 0.96953125,
+            "f1-score": 0.9693350019815474,
+            "support": 1280.0
+          }
+        }
+      },
+      "validation_selected_threshold": 0.3732279445407445,
+      "review_policy_performance": {
+        "threshold": 0.3732279445407445,
+        "total_documents": 1280,
+        "accepted_documents": 1280,
+        "rejected_documents": 0,
+        "coverage": 1.0,
+        "accepted_accuracy": 0.96953125
+      },
+      "metrics_by_variant": {
+        "clean": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              80,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 320.0
+            }
+          }
+        },
+        "long_clean": {
+          "accuracy": 0.940625,
+          "macro_f1": 0.9397757438884267,
+          "balanced_accuracy": 0.940625,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              19,
+              61,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 0.8080808080808081,
+              "recall": 1.0,
+              "f1-score": 0.8938547486033519,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.7625,
+              "f1-score": 0.8652482269503546,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "accuracy": 0.940625,
+            "macro avg": {
+              "precision": 0.952020202020202,
+              "recall": 0.940625,
+              "f1-score": 0.9397757438884267,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.9520202020202021,
+              "recall": 0.940625,
+              "f1-score": 0.9397757438884267,
+              "support": 320.0
+            }
+          }
+        },
+        "long_ocr_noisy": {
+          "accuracy": 0.94375,
+          "macro_f1": 0.9430289602785251,
+          "balanced_accuracy": 0.94375,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              18,
+              62,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 0.8163265306122449,
+              "recall": 1.0,
+              "f1-score": 0.898876404494382,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.775,
+              "f1-score": 0.8732394366197183,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "accuracy": 0.94375,
+            "macro avg": {
+              "precision": 0.9540816326530612,
+              "recall": 0.94375,
+              "f1-score": 0.9430289602785251,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.9540816326530612,
+              "recall": 0.94375,
+              "f1-score": 0.9430289602785251,
+              "support": 320.0
+            }
+          }
+        },
+        "ocr_noisy": {
+          "accuracy": 0.99375,
+          "macro_f1": 0.9937490232848882,
+          "balanced_accuracy": 0.99375,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              78,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.975,
+              "f1-score": 0.9873417721518988,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.975609756097561,
+              "recall": 1.0,
+              "f1-score": 0.9876543209876543,
+              "support": 80.0
+            },
+            "accuracy": 0.99375,
+            "macro avg": {
+              "precision": 0.9939024390243902,
+              "recall": 0.99375,
+              "f1-score": 0.9937490232848882,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.9939024390243902,
+              "recall": 0.99375,
+              "f1-score": 0.9937490232848883,
+              "support": 320.0
+            }
+          }
+        }
+      }
+    },
+    "mean_probability": {
+      "classification": {
+        "accuracy": 0.6234375,
+        "macro_f1": 0.6407708797854459,
+        "balanced_accuracy": 0.6234375,
+        "confusion_matrix": [
+          [
+            320,
+            0,
+            0,
+            0
+          ],
+          [
+            160,
+            158,
+            0,
+            2
+          ],
+          [
+            160,
+            0,
+            160,
+            0
+          ],
+          [
+            160,
+            0,
+            0,
+            160
+          ]
+        ],
+        "classification_report": {
+          "encumbrance_certificate": {
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1-score": 0.5714285714285714,
+            "support": 320.0
+          },
+          "other_or_unknown": {
+            "precision": 1.0,
+            "recall": 0.49375,
+            "f1-score": 0.6610878661087866,
+            "support": 320.0
+          },
+          "property_tax_receipt": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 320.0
+          },
+          "sale_deed": {
+            "precision": 0.9876543209876543,
+            "recall": 0.5,
+            "f1-score": 0.6639004149377593,
+            "support": 320.0
+          },
+          "accuracy": 0.6234375,
+          "macro avg": {
+            "precision": 0.8469135802469135,
+            "recall": 0.6234375,
+            "f1-score": 0.6407708797854459,
+            "support": 1280.0
+          },
+          "weighted avg": {
+            "precision": 0.8469135802469137,
+            "recall": 0.6234375,
+            "f1-score": 0.6407708797854459,
+            "support": 1280.0
+          }
+        }
+      },
+      "validation_selected_threshold": 0.746310158383794,
+      "review_policy_performance": {
+        "threshold": 0.746310158383794,
+        "total_documents": 1280,
+        "accepted_documents": 874,
+        "rejected_documents": 406,
+        "coverage": 0.6828125,
+        "accepted_accuracy": 0.9118993135011442
+      },
+      "metrics_by_variant": {
+        "clean": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              80,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 320.0
+            }
+          }
+        },
+        "long_clean": {
+          "accuracy": 0.25,
+          "macro_f1": 0.1,
+          "balanced_accuracy": 0.25,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1-score": 0.4,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "accuracy": 0.25,
+            "macro avg": {
+              "precision": 0.0625,
+              "recall": 0.25,
+              "f1-score": 0.1,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.0625,
+              "recall": 0.25,
+              "f1-score": 0.1,
+              "support": 320.0
+            }
+          }
+        },
+        "long_ocr_noisy": {
+          "accuracy": 0.25,
+          "macro_f1": 0.1,
+          "balanced_accuracy": 0.25,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1-score": 0.4,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "accuracy": 0.25,
+            "macro avg": {
+              "precision": 0.0625,
+              "recall": 0.25,
+              "f1-score": 0.1,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.0625,
+              "recall": 0.25,
+              "f1-score": 0.1,
+              "support": 320.0
+            }
+          }
+        },
+        "ocr_noisy": {
+          "accuracy": 0.99375,
+          "macro_f1": 0.9937490232848882,
+          "balanced_accuracy": 0.99375,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              78,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.975,
+              "f1-score": 0.9873417721518988,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.975609756097561,
+              "recall": 1.0,
+              "f1-score": 0.9876543209876543,
+              "support": 80.0
+            },
+            "accuracy": 0.99375,
+            "macro avg": {
+              "precision": 0.9939024390243902,
+              "recall": 0.99375,
+              "f1-score": 0.9937490232848882,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.9939024390243902,
+              "recall": 0.99375,
+              "f1-score": 0.9937490232848883,
+              "support": 320.0
+            }
+          }
+        }
+      }
+    },
+    "mean_logits": {
+      "classification": {
+        "accuracy": 0.6234375,
+        "macro_f1": 0.6407708797854459,
+        "balanced_accuracy": 0.6234375,
+        "confusion_matrix": [
+          [
+            320,
+            0,
+            0,
+            0
+          ],
+          [
+            160,
+            158,
+            0,
+            2
+          ],
+          [
+            160,
+            0,
+            160,
+            0
+          ],
+          [
+            160,
+            0,
+            0,
+            160
+          ]
+        ],
+        "classification_report": {
+          "encumbrance_certificate": {
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1-score": 0.5714285714285714,
+            "support": 320.0
+          },
+          "other_or_unknown": {
+            "precision": 1.0,
+            "recall": 0.49375,
+            "f1-score": 0.6610878661087866,
+            "support": 320.0
+          },
+          "property_tax_receipt": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1-score": 0.6666666666666666,
+            "support": 320.0
+          },
+          "sale_deed": {
+            "precision": 0.9876543209876543,
+            "recall": 0.5,
+            "f1-score": 0.6639004149377593,
+            "support": 320.0
+          },
+          "accuracy": 0.6234375,
+          "macro avg": {
+            "precision": 0.8469135802469135,
+            "recall": 0.6234375,
+            "f1-score": 0.6407708797854459,
+            "support": 1280.0
+          },
+          "weighted avg": {
+            "precision": 0.8469135802469137,
+            "recall": 0.6234375,
+            "f1-score": 0.6407708797854459,
+            "support": 1280.0
+          }
+        }
+      },
+      "validation_selected_threshold": 0.7907964919049697,
+      "review_policy_performance": {
+        "threshold": 0.7907964919049697,
+        "total_documents": 1280,
+        "accepted_documents": 870,
+        "rejected_documents": 410,
+        "coverage": 0.6796875,
+        "accepted_accuracy": 0.9160919540229885
+      },
+      "metrics_by_variant": {
+        "clean": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              80,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 320.0
+            }
+          }
+        },
+        "long_clean": {
+          "accuracy": 0.25,
+          "macro_f1": 0.1,
+          "balanced_accuracy": 0.25,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1-score": 0.4,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "accuracy": 0.25,
+            "macro avg": {
+              "precision": 0.0625,
+              "recall": 0.25,
+              "f1-score": 0.1,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.0625,
+              "recall": 0.25,
+              "f1-score": 0.1,
+              "support": 320.0
+            }
+          }
+        },
+        "long_ocr_noisy": {
+          "accuracy": 0.25,
+          "macro_f1": 0.1,
+          "balanced_accuracy": 0.25,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "f1-score": 0.4,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "accuracy": 0.25,
+            "macro avg": {
+              "precision": 0.0625,
+              "recall": 0.25,
+              "f1-score": 0.1,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.0625,
+              "recall": 0.25,
+              "f1-score": 0.1,
+              "support": 320.0
+            }
+          }
+        },
+        "ocr_noisy": {
+          "accuracy": 0.99375,
+          "macro_f1": 0.9937490232848882,
+          "balanced_accuracy": 0.99375,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              78,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.975,
+              "f1-score": 0.9873417721518988,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.975609756097561,
+              "recall": 1.0,
+              "f1-score": 0.9876543209876543,
+              "support": 80.0
+            },
+            "accuracy": 0.99375,
+            "macro avg": {
+              "precision": 0.9939024390243902,
+              "recall": 0.99375,
+              "f1-score": 0.9937490232848882,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.9939024390243902,
+              "recall": 0.99375,
+              "f1-score": 0.9937490232848883,
+              "support": 320.0
+            }
+          }
+        }
+      }
+    },
+    "highest_confidence_window": {
+      "classification": {
+        "accuracy": 0.7640625,
+        "macro_f1": 0.7649027291296376,
+        "balanced_accuracy": 0.7640625,
+        "confusion_matrix": [
+          [
+            320,
+            0,
+            0,
+            0
+          ],
+          [
+            140,
+            178,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            320,
+            0
+          ],
+          [
+            160,
+            0,
+            0,
+            160
+          ]
+        ],
+        "classification_report": {
+          "encumbrance_certificate": {
+            "precision": 0.5161290322580645,
+            "recall": 1.0,
+            "f1-score": 0.6808510638297872,
+            "support": 320.0
+          },
+          "other_or_unknown": {
+            "precision": 1.0,
+            "recall": 0.55625,
+            "f1-score": 0.714859437751004,
+            "support": 320.0
+          },
+          "property_tax_receipt": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 320.0
+          },
+          "sale_deed": {
+            "precision": 0.9876543209876543,
+            "recall": 0.5,
+            "f1-score": 0.6639004149377593,
+            "support": 320.0
+          },
+          "accuracy": 0.7640625,
+          "macro avg": {
+            "precision": 0.8759458383114297,
+            "recall": 0.7640625,
+            "f1-score": 0.7649027291296376,
+            "support": 1280.0
+          },
+          "weighted avg": {
+            "precision": 0.8759458383114296,
+            "recall": 0.7640625,
+            "f1-score": 0.7649027291296375,
+            "support": 1280.0
+          }
+        }
+      },
+      "validation_selected_threshold": 0.8727345657540176,
+      "review_policy_performance": {
+        "threshold": 0.8727345657540176,
+        "total_documents": 1280,
+        "accepted_documents": 1017,
+        "rejected_documents": 263,
+        "coverage": 0.79453125,
+        "accepted_accuracy": 0.9419862340216323
+      },
+      "metrics_by_variant": {
+        "clean": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              80,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 320.0
+            }
+          }
+        },
+        "long_clean": {
+          "accuracy": 0.534375,
+          "macro_f1": 0.43988939862726273,
+          "balanced_accuracy": 0.534375,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              69,
+              11,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 0.34934497816593885,
+              "recall": 1.0,
+              "f1-score": 0.517799352750809,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.1375,
+              "f1-score": 0.24175824175824176,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "accuracy": 0.534375,
+            "macro avg": {
+              "precision": 0.5873362445414847,
+              "recall": 0.534375,
+              "f1-score": 0.43988939862726273,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.5873362445414847,
+              "recall": 0.534375,
+              "f1-score": 0.43988939862726273,
+              "support": 320.0
+            }
+          }
+        },
+        "long_ocr_noisy": {
+          "accuracy": 0.528125,
+          "macro_f1": 0.42917916109686044,
+          "balanced_accuracy": 0.528125,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              71,
+              9,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              80,
+              0,
+              0,
+              0
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 0.3463203463203463,
+              "recall": 1.0,
+              "f1-score": 0.5144694533762058,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.1125,
+              "f1-score": 0.20224719101123595,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 80.0
+            },
+            "accuracy": 0.528125,
+            "macro avg": {
+              "precision": 0.5865800865800865,
+              "recall": 0.528125,
+              "f1-score": 0.42917916109686044,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.5865800865800865,
+              "recall": 0.528125,
+              "f1-score": 0.42917916109686044,
+              "support": 320.0
+            }
+          }
+        },
+        "ocr_noisy": {
+          "accuracy": 0.99375,
+          "macro_f1": 0.9937490232848882,
+          "balanced_accuracy": 0.99375,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              78,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.975,
+              "f1-score": 0.9873417721518988,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.975609756097561,
+              "recall": 1.0,
+              "f1-score": 0.9876543209876543,
+              "support": 80.0
+            },
+            "accuracy": 0.99375,
+            "macro avg": {
+              "precision": 0.9939024390243902,
+              "recall": 0.99375,
+              "f1-score": 0.9937490232848882,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.9939024390243902,
+              "recall": 0.99375,
+              "f1-score": 0.9937490232848883,
+              "support": 320.0
+            }
+          }
+        }
+      }
+    },
+    "first_weighted": {
+      "classification": {
+        "accuracy": 0.95625,
+        "macro_f1": 0.9563340624963913,
+        "balanced_accuracy": 0.95625,
+        "confusion_matrix": [
+          [
+            320,
+            0,
+            0,
+            0
+          ],
+          [
+            46,
+            272,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            320,
+            0
+          ],
+          [
+            8,
+            0,
+            0,
+            312
+          ]
+        ],
+        "classification_report": {
+          "encumbrance_certificate": {
+            "precision": 0.8556149732620321,
+            "recall": 1.0,
+            "f1-score": 0.9221902017291066,
+            "support": 320.0
+          },
+          "other_or_unknown": {
+            "precision": 1.0,
+            "recall": 0.85,
+            "f1-score": 0.918918918918919,
+            "support": 320.0
+          },
+          "property_tax_receipt": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1-score": 1.0,
+            "support": 320.0
+          },
+          "sale_deed": {
+            "precision": 0.9936305732484076,
+            "recall": 0.975,
+            "f1-score": 0.9842271293375394,
+            "support": 320.0
+          },
+          "accuracy": 0.95625,
+          "macro avg": {
+            "precision": 0.9623113866276098,
+            "recall": 0.95625,
+            "f1-score": 0.9563340624963913,
+            "support": 1280.0
+          },
+          "weighted avg": {
+            "precision": 0.96231138662761,
+            "recall": 0.95625,
+            "f1-score": 0.9563340624963914,
+            "support": 1280.0
+          }
+        }
+      },
+      "validation_selected_threshold": 0.44940215228431185,
+      "review_policy_performance": {
+        "threshold": 0.44940215228431185,
+        "total_documents": 1280,
+        "accepted_documents": 1278,
+        "rejected_documents": 2,
+        "coverage": 0.9984375,
+        "accepted_accuracy": 0.9577464788732394
+      },
+      "metrics_by_variant": {
+        "clean": {
+          "accuracy": 1.0,
+          "macro_f1": 1.0,
+          "balanced_accuracy": 1.0,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              80,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "accuracy": 1.0,
+            "macro avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 320.0
+            }
+          }
+        },
+        "long_clean": {
+          "accuracy": 0.915625,
+          "macro_f1": 0.9155226839855436,
+          "balanced_accuracy": 0.9156249999999999,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              23,
+              57,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              4,
+              0,
+              0,
+              76
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 0.7476635514018691,
+              "recall": 1.0,
+              "f1-score": 0.8556149732620321,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.7125,
+              "f1-score": 0.8321167883211679,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 1.0,
+              "recall": 0.95,
+              "f1-score": 0.9743589743589743,
+              "support": 80.0
+            },
+            "accuracy": 0.915625,
+            "macro avg": {
+              "precision": 0.9369158878504673,
+              "recall": 0.9156249999999999,
+              "f1-score": 0.9155226839855436,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.9369158878504674,
+              "recall": 0.915625,
+              "f1-score": 0.9155226839855436,
+              "support": 320.0
+            }
+          }
+        },
+        "long_ocr_noisy": {
+          "accuracy": 0.915625,
+          "macro_f1": 0.9155226839855436,
+          "balanced_accuracy": 0.9156249999999999,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              23,
+              57,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              4,
+              0,
+              0,
+              76
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 0.7476635514018691,
+              "recall": 1.0,
+              "f1-score": 0.8556149732620321,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.7125,
+              "f1-score": 0.8321167883211679,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 1.0,
+              "recall": 0.95,
+              "f1-score": 0.9743589743589743,
+              "support": 80.0
+            },
+            "accuracy": 0.915625,
+            "macro avg": {
+              "precision": 0.9369158878504673,
+              "recall": 0.9156249999999999,
+              "f1-score": 0.9155226839855436,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.9369158878504674,
+              "recall": 0.915625,
+              "f1-score": 0.9155226839855436,
+              "support": 320.0
+            }
+          }
+        },
+        "ocr_noisy": {
+          "accuracy": 0.99375,
+          "macro_f1": 0.9937490232848882,
+          "balanced_accuracy": 0.99375,
+          "confusion_matrix": [
+            [
+              80,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              78,
+              0,
+              2
+            ],
+            [
+              0,
+              0,
+              80,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              80
+            ]
+          ],
+          "classification_report": {
+            "encumbrance_certificate": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "other_or_unknown": {
+              "precision": 1.0,
+              "recall": 0.975,
+              "f1-score": 0.9873417721518988,
+              "support": 80.0
+            },
+            "property_tax_receipt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1-score": 1.0,
+              "support": 80.0
+            },
+            "sale_deed": {
+              "precision": 0.975609756097561,
+              "recall": 1.0,
+              "f1-score": 0.9876543209876543,
+              "support": 80.0
+            },
+            "accuracy": 0.99375,
+            "macro avg": {
+              "precision": 0.9939024390243902,
+              "recall": 0.99375,
+              "f1-score": 0.9937490232848882,
+              "support": 320.0
+            },
+            "weighted avg": {
+              "precision": 0.9939024390243902,
+              "recall": 0.99375,
+              "f1-score": 0.9937490232848883,
+              "support": 320.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "limitations": [
+    "The model is the existing v6 candidate, not the fresh v7 model.",
+    "Independence of the checkpoint from the v7 test templates must be verified from its training metadata.",
+    "Thresholds were selected on the supplied validation split only.",
+    "Synthetic benchmark performance does not establish real-world accuracy on authentic property documents or real OCR scans.",
+    "Confidence scores do not establish document authenticity or legal validity."
+  ]
+}

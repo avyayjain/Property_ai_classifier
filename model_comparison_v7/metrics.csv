@@ -1,0 +1,17 @@
+model,strategy,variant,accuracy,macro_f1,n
+tfidf,clean_only,clean,1.0,1.0,320
+tfidf,clean_only,ocr_noisy,1.0,1.0,320
+tfidf,clean_only,long_clean,1.0,1.0,320
+tfidf,clean_only,long_ocr_noisy,1.0,1.0,320
+tfidf,augmented,clean,1.0,1.0,320
+tfidf,augmented,ocr_noisy,1.0,1.0,320
+tfidf,augmented,long_clean,1.0,1.0,320
+tfidf,augmented,long_ocr_noisy,1.0,1.0,320
+bert_tiny,clean_only,clean,1.0,1.0,320
+bert_tiny,clean_only,ocr_noisy,0.996875,0.9968748779249189,320
+bert_tiny,clean_only,long_clean,1.0,1.0,320
+bert_tiny,clean_only,long_ocr_noisy,1.0,1.0,320
+bert_tiny,augmented,clean,1.0,1.0,320
+bert_tiny,augmented,ocr_noisy,1.0,1.0,320
+bert_tiny,augmented,long_clean,1.0,1.0,320
+bert_tiny,augmented,long_ocr_noisy,1.0,1.0,320
