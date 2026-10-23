@@ -1,0 +1,11 @@
+﻿streamlit
+PyMuPDF
+pytesseract
+Pillow
+scikit-learn
+torch
+transformers
+safetensors
+numpy
+pandas
+joblib

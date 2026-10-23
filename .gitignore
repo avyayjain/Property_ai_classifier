@@ -1,0 +1,52 @@
+﻿# Python and virtual environments
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# IDE and local configuration
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+
+# Backups and temporary files
+*.bak
+*.before_*
+main_before_*.py
+*.tmp
+*.log
+
+# Generated application output
+review_output/
+ocr_output/
+output/
+outputs/
+
+# Private documents and validation artifacts
+real_document_validation/
+real_validation/
+
+# Large experiment and evaluation artifacts
+aggregation_comparison_v7/
+evaluation_v6_candidate_v7/
+evaluation_windowing_v7_long/
+field_extraction_evaluation/
+model_comparison_v7/
+ocr_evaluation/
+
+# Generated evaluation data
+candidate_test_errors.csv
+heldout_v7_predictions.csv
+synthetic_property_documents.csv
+synthetic_property_documents_v5.csv
+synthetic_property_documents_v6.csv
+synthetic_property_documents_v7.csv
+synthetic_property_documents_v7_long.csv
+
+# Local OS files
+.DS_Store
+Thumbs.db
